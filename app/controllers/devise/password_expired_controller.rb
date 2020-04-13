@@ -30,7 +30,7 @@ class Devise::PasswordExpiredController < DeviseController
   end
 
   def resource_params
-    permitted_params = [:current_password, :password, :password_confirmation]
+    permitted_params = [:password, :password_confirmation]
 
     if params.respond_to?(:permit)
       params.require(resource_name).permit(*permitted_params)
